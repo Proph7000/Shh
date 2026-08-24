@@ -6,9 +6,9 @@ Shh… is distributed **unsigned** (it isn't signed with a paid Apple Developer 
 
 ## Step 1 — Download
 
-**[⬇️ Download Shh.dmg](https://github.com/AndriiAndrieiev-dev/Shh/releases/latest/download/Shh.dmg)**
+**[⬇️ Download Shh.dmg](https://github.com/Proph7000/Shh/releases/latest/download/Shh.dmg)**
 
-This link always points to the latest release. You can also browse all versions on the [Releases page](https://github.com/AndriiAndrieiev-dev/Shh/releases).
+This link always points to the latest release. You can also browse all versions on the [Releases page](https://github.com/Proph7000/Shh/releases).
 
 ## Step 2 — Move to Applications
 

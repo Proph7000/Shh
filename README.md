@@ -6,7 +6,7 @@ It's a modern, open-source alternative to **MuteKey**, which is x86_64-only and 
 
 > **One key. Instant mute. Every app.** Zoom, Google Meet, Microsoft Teams, Discord, Slack huddles, FaceTime, OBS — Shh… mutes the microphone at the system level, so it works no matter which app is listening.
 
-### ⬇️ [Download the latest version (Shh.dmg)](https://github.com/AndriiAndrieiev-dev/Shh/releases/latest/download/Shh.dmg)
+### ⬇️ [Download the latest version (Shh.dmg)](https://github.com/Proph7000/Shh/releases/latest/download/Shh.dmg)
 
 See **[how-to-install.md](how-to-install.md)** for step-by-step setup (the app is unsigned, so there's a one-time Gatekeeper step).
 
@@ -55,7 +55,7 @@ See **[how-to-install.md](how-to-install.md)** for step-by-step setup (the app i
 
 ## Installation
 
-1. **[Download Shh.dmg](https://github.com/AndriiAndrieiev-dev/Shh/releases/latest/download/Shh.dmg)**
+1. **[Download Shh.dmg](https://github.com/Proph7000/Shh/releases/latest/download/Shh.dmg)**
 2. Open the DMG and drag **Shh** into **Applications**.
 3. Because the app is unsigned, get past Gatekeeper once — either **System Settings → Privacy & Security → Open Anyway**, or run:
    ```sh
