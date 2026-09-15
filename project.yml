@@ -30,8 +30,8 @@ targets:
       path: Shh/Info.plist
       properties:
         CFBundleDisplayName: "Shh…"
-        CFBundleShortVersionString: "0.1.1"
-        CFBundleVersion: "2"
+        CFBundleShortVersionString: "0.1.2"
+        CFBundleVersion: "3"
         LSUIElement: true
         LSMinimumSystemVersion: "14.0"
         NSMicrophoneUsageDescription: "Shh… optionally displays which app is currently using your microphone. Microphone access is not required for the core mute/unmute functionality."

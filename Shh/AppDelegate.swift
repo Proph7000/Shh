@@ -47,6 +47,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // Persistent floating mic indicator — visible while muted if the
         // user enables the toggle in Preferences.
         PersistentMicIndicatorController.shared.start()
+
+        // Watch for macOS Secure Input Mode, which silently blocks the global
+        // hotkey system-wide; the popover surfaces a banner when it's active.
+        SecureInputMonitor.shared.start()
     }
 
     func applicationWillTerminate(_ notification: Notification) {

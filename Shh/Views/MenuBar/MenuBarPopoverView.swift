@@ -15,9 +15,14 @@ struct MenuBarPopoverView: View {
     @ObservedObject var audio: AudioDeviceManager
     @ObservedObject private var preferences = PreferencesStore.shared
     @ObservedObject private var loc = LocalizationManager.shared
+    @ObservedObject private var secureInput = SecureInputMonitor.shared
 
     var body: some View {
         VStack(spacing: 16) {
+            if secureInput.isActive {
+                secureInputBanner
+            }
+
             stateCircle
 
             Text(audio.isActiveSelectionMuted ? loc.t(.micOff) : loc.t(.micOn))
@@ -92,6 +97,31 @@ struct MenuBarPopoverView: View {
         case ..<0.8: return .thickMaterial
         default:     return .ultraThickMaterial
         }
+    }
+
+    /// Shown only while macOS Secure Input Mode is active — it blocks the
+    /// global hotkey system-wide, which otherwise looks like an app bug.
+    private var secureInputBanner: some View {
+        HStack(alignment: .top, spacing: 8) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .foregroundStyle(.orange)
+                .font(.system(size: 14))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(loc.t(.secureInputTitle))
+                    .font(.caption.weight(.semibold))
+                Text(loc.t(.secureInputHint))
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .padding(10)
+        .background(.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 10))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(.orange.opacity(0.35), lineWidth: 0.5)
+        )
     }
 
     private var stateCircle: some View {

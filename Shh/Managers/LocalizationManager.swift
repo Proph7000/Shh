@@ -26,6 +26,7 @@ enum LocKey: String, CaseIterable {
     case preferencesTooltip
     case toggleCircleHelpMute, toggleCircleHelpUnmute
     case allToggleHelpOn, allToggleHelpOff
+    case secureInputTitle, secureInputHint
 
     // HUD
     case hudMicOn, hudMicOff
@@ -118,6 +119,9 @@ final class LocalizationManager: ObservableObject {
         .toggleCircleHelpUnmute: ("Unmute (or click the icon in menu bar)", "Увімкнути (або клацніть іконку в меню-барі)"),
         .allToggleHelpOn:  ("Switch to per-device selection", "Перейти до вибору окремих пристроїв"),
         .allToggleHelpOff: ("Apply to all controllable devices", "Застосувати до всіх керованих пристроїв"),
+        .secureInputTitle: ("Hotkey blocked by Secure Input", "Гарячу клавішу блокує Secure Input"),
+        .secureInputHint:  ("Another app (a password field, or a stuck login prompt) has turned on macOS Secure Input, which blocks the hotkey system-wide. Close password fields, or lock and unlock the screen (⌃⌘Q), to restore it. Clicking the icon still works.",
+                            "Інша програма (поле пароля або застряглий запит входу) увімкнула macOS Secure Input, що блокує гарячу клавішу в усій системі. Закрийте поля пароля або заблокуйте й розблокуйте екран (⌃⌘Q), щоб відновити. Клік по іконці працює як завжди."),
 
         .hudMicOn:  ("Mic ON", "Мік увімкнено"),
         .hudMicOff: ("Mic OFF", "Мік вимкнено"),
